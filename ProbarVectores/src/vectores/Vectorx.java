@@ -60,32 +60,12 @@ public class Vectorx {
 		
 	}	
 	
-	public int[] borrarNumero(int numero) {
+	public int[] borrarNumero(int numero ) {
 		
-		boolean borrado = false;
-		int longitudNueva = 0;
-		
-		for(int i=0; i<datos.length; i++) {
+		for(int i=buscar(numero, 0); i<datos.length; i++) {
 			
-			if((!borrado)) {
-				
-				if(datos[i]!=numero) {
-					datos[i]=datos[i];
-				}
-				else if(datos[i]==numero) {
-					datos[i]=datos[i+1];
-					borrado = true;
-				}
-			}
-			else if(borrado) {
-				longitudNueva = datos.length-1;
-				if(i==longitudNueva) {
-					i=datos.length;
-				}
-				else{
-					datos[i]=datos[i+1];
-				}
-			}
+			if(i==datos.length-1) i=datos.length; else datos[i]=datos[i+1];
+			
 		}
 		return datos;
 	}

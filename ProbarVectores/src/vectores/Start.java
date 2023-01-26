@@ -16,17 +16,15 @@ public class Start {
 			v.add(650);
 			
 			
-			int donde = v.buscar(100, 0);
-			while(donde!=-1) {
-				
-				System.out.println(donde);
-				donde = v.buscar(100, donde+1);
-			}
+			
 			
 			System.out.println(v);
-			v.borrarNumero(2);
+			v.borrarNumero(650);
 			System.out.println(v);
-			
+			v.borrarNumero(100);
+			System.out.println(v);
+			v.borrarNumero(7);
+			System.out.println(v);
 		}
 
 }
